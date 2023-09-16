@@ -56,8 +56,8 @@ function rataRata() { //fungsi untuk menghitung rata-rata uang sangu dan umur
     const averageUangSangu = totalUangSangu / pendaftarList.length;
     const averageUmur = totalUmur / pendaftarList.length;
 
-    avgUangSangu.textContent = averageUangSangu.toFixed();
-    avgUmur.textContent = averageUmur.toFixed();
+    avgUangSangu.textContent = averageUangSangu.toFixed(2);
+    avgUmur.textContent = averageUmur.toFixed(2);
 }
 
 function clearForm() { //fungsi untuk menghapus isian dari form registrasi setelah mengklik button submit
