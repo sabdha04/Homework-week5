@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Registrasi dan List Pendaftar</title>
+</head>
+<body>
+    <section>
+        <div id="Registrasi" class="tabcontent">
+            <h2 class="font-bold text-xl mb-2 bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Form Registrasi</h2>
+            <form id="registrationForm">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="nama">Nama:</label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" id="nama" name="nama" required minlength="10" placeholder="minimal 10 karakter"><br><br>
+    
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="umur">Umur:</label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="number" id="umur" name="umur" required min="25" placeholder="minimal 25 tahun"><br><br>
+    
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="uangSangu">Uang Sangu (Rp.):</label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="number" id="uangSangu" name="uangSangu" required min="100000" max="1000000" placeholder="minimal 100 ribu dan maksimal 1 juta"><br><br>
+    
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" onclick="submitForm()">Submit</button>
+            </form>
+        </div>
+    </section>
+    
+    <section>
+        <div id="ListPendaftar" class="tabcontent">
+            <h2 class="font-bold text-xl mb-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">List Pendaftar</h2>
+            <table id="pendaftarTable">
+                <tr>
+                    <th>Nama</th>
+                    <th>Umur</th>
+                    <th>Uang Sangu (Rp.)</th>
+                </tr>
+            </table>
+            <p>Rata rata pendaftar memiliki uang sangu sebesar Rp. <span id="avgUangSangu">0</span> dengan rata rata umur <span id="avgUmur">0</span></p>
+        </div>
+        <div class="tabs">
+            <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline tablinks" onclick="openTab(event, 'Registrasi')">Registrasi</button>
+            <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline tablinks" onclick="openTab(event, 'ListPendaftar')">List Pendaftar</button>
+        </div>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>
